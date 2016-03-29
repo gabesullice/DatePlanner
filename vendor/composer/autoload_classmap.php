@@ -6,12 +6,12 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
-    'PlannerItem\\Reminder' => $baseDir . '/src/Planner/Item/ReminderItem.php',
     'Planner\\DateMapper\\DateMapper' => $baseDir . '/src/Planner/DateMapper/DateMapper.php',
     'Planner\\Item\\CurriculumItem' => $baseDir . '/src/Planner/Item/CurriculumItem.php',
     'Planner\\Item\\ImmovableItem' => $baseDir . '/src/Planner/Item/ImmovableItem.php',
     'Planner\\Item\\OffsetItem' => $baseDir . '/src/Planner/Item/OffsetItem.php',
     'Planner\\Item\\RelativeItemGeneratorInterface' => $baseDir . '/src/Planner/Item/RelativeItemGeneratorInterface.php',
+    'Planner\\Item\\ReminderItem' => $baseDir . '/src/Planner/Item/ReminderItem.php',
     'Planner\\Item\\SortableItemInterface' => $baseDir . '/src/Planner/Item/SortableItemInterface.php',
     'Planner\\Sorter\\ItemSorter' => $baseDir . '/src/Planner/Sorter/ItemSorter.php',
     'Planner\\Sorter\\ItemSorterInterface' => $baseDir . '/src/Planner/Sorter/ItemSorterInterface.php',

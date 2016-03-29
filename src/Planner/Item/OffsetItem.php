@@ -6,7 +6,7 @@ trait OffsetItem {
   protected $offset;
 
   public function __construct($offset) {
-    $this->planOffset = $offset;
+    $this->offset = $offset;
   }
 
   public function getOffset() {

@@ -20,13 +20,15 @@ class ItemSorter implements ItemSorterInterface {
   /**
    * {@inheritdoc}
    */
-  public static function sort($items) {
-    $compare_items = function ($a, $b) {
-      return $this->comparator->compare($a, $b);
+  public function sort(&$items) {
+    $compare_function = function ($comparator) {
+      return function ($a, $b) use ($comparator) {
+        return $comparator->compare($a, $b);
+      };
     };
 
     try {
-      $sorted = uasort($items, $compare_items);
+      $sorted = uasort($items, $compare_function($this->comparator));
     }
     catch (\Exception $e) {
       $err_msg = sprintf("%s: %s", "Unable to sort items", $e->getMessage());

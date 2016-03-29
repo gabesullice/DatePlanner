@@ -10,5 +10,5 @@ interface ItemSorterInterface {
    * 
    * @return \Planner\Item\SortableItemInterface[]
    */
-  public static function sort($items);
+  public function sort(&$items);
 }

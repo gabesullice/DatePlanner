@@ -1,11 +1,10 @@
 <?php
 
-namespace PlannerItem;
+namespace Planner\Item;
 
-class Reminder implements SortableItemInterface {
+class ReminderItem implements SortableItemInterface {
   use OffsetItem;
 
-  public function isExclusive() { 
-    return FALSE;
-  }
+  public static function isExclusive() { return FALSE; }
+  public static function isImmovable() { return FALSE; }
 }
