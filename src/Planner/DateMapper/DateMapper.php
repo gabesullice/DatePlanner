@@ -29,7 +29,8 @@ class DateMapper {
 
   public static function offsetsToDates($start_date, $offsets) {
     $offsetToDate = function ($offset) use ($start_date) {
-      return strtotime($start_date, "+{$offset} days");
+      $string = "{$start_date} +{$offset} days";
+      return strtotime($string);
     };
 
     return array_map($offsetToDate, $offsets);

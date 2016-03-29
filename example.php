@@ -20,12 +20,11 @@ $sorter = new ItemSorter();
 
 $sorter->sort($items);
 
-var_export($items);
 
 $consolidated = DateMapper::consolidateItems($items);
 
-var_export($consolidated);
+$dates = DateMapper::offsetsToDates('2016-01-01', array_keys($consolidated));
 
-//$dates = DateMapper::offsetsToDates('2016-01-01', array_keys($consolidated));
-//
-//$scheduled_items = array_combine($dates, array_values($consolidated));
+$scheduled_items = array_combine($dates, array_values($consolidated));
+
+var_export($scheduled_items);
