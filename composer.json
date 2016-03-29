@@ -1,0 +1,13 @@
+{
+    "name": "gabesullice/planner",
+    "authors": [
+        {
+            "name": "Gabriel SULLICE",
+            "email": "gabriel@sullice.com"
+        }
+    ],
+    "autoload": {
+      "classmap": ["src/"]
+    },
+    "require": {}
+}
