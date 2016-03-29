@@ -12,7 +12,7 @@ class CurriculumItem implements SortableItemInterface, RelativeItemGeneratorInte
   public static function isImmovable() { return FALSE; }
 
   public function addReminder($relativeOffset) {
-    $reminder =  new ReminderItem($this->getPlanOffset() + $relativeOffset);
+    $reminder =  new ReminderItem($this->getOffset() + $relativeOffset);
     array_push($this->reminders, $reminder);
   }
 
