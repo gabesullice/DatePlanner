@@ -1,6 +1,6 @@
 <?php
 
-namespace Planner\Item\Sorter;
+namespace Planner\Sorter;
 
 interface ItemSorterInterface {
   /**

@@ -1,6 +1,6 @@
 <?php
 
-namespace Planner\Item\Sorter;
+namespace Planner\Sorter;
 
 class ItemSorter implements ItemSorterInterface {
   /**
@@ -20,10 +20,10 @@ class ItemSorter implements ItemSorterInterface {
   /**
    * {@inheritdoc}
    */
-  public function sort($items) {
+  public static function sort($items) {
     $compare_items = function ($a, $b) {
       return $this->comparator->compare($a, $b);
-    }
+    };
 
     try {
       $sorted = uasort($items, $compare_items);

@@ -10,7 +10,7 @@ class DateMapper {
    *
    * @param Planner\Item\SortableItemInterface[] $items
    */
-  public static function consolidateItems(SortableItemInterface $items) {
+  public static function consolidateItems($items) {
     return array_reduce($items, function ($consolidated, $item) {
       // When an item is immovable or exclusive, create a new offset and append
       // to a new array at that offset.

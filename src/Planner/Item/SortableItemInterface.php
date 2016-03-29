@@ -4,6 +4,6 @@ namespace Planner\Item;
 
 interface SortableItemInterface {
   public function getOffset();
-  public function isExclusive();
-  public function isImmovable();
+  public static function isExclusive();
+  public static function isImmovable();
 }

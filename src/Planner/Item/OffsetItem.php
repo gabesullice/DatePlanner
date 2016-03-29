@@ -3,13 +3,13 @@
 namespace Planner\Item;
 
 trait OffsetItem {
-  protected $planOffset;
+  protected $offset;
 
   public function __construct($offset) {
     $this->planOffset = $offset;
   }
 
-  public function getPlanOffset() {
-    return $this->planOffset();
+  public function getOffset() {
+    return $this->offset;
   }
 }

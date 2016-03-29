@@ -5,7 +5,6 @@ namespace Planner\Item;
 class ImmovableItem implements SortableItemInterface {
   use OffsetItem;
 
-  public function isExclusive() {
-    return TRUE;
-  }
+  public static function isExclusive() { return TRUE; }
+  public static function isImmovable() { return TRUE; }
 }
